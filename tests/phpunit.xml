@@ -1,0 +1,7 @@
+<phpunit bootstrap="./bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="CASE Common Test Suite">
+            <directory>./CASECommon</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
