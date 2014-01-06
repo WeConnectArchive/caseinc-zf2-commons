@@ -19,9 +19,14 @@ interface EntityServiceInterface {
 	public function findById($id);
 	
 	/**
-	 * @param array $conditions
+	 * Return a collection of entities filtered by certain conditions
+	 * in certain order
+	 * @param array $conditions ['id'=>150, name'=>'John']
+	 * @param array $order  as ['name'=>'ASC', 'created'=>'DESC'] 
+     * @param int|null   $limit
+     * @param int|null   $offset
 	 */
-	public function findBy(array $conditions);
+	public function findBy(array $conditions, array $order = [],  $limit = null, $offset = null);
 	
 	/**
 	 * @param mixed $entity
